@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How OKC TV Publisher handles approved images, publishing metadata, Google authorization, and staff controls.">
+  <title>Privacy | OKC TV Publisher</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html">OKC TV Publisher</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="shell">
+    <article class="prose">
+      <p class="eyebrow">Images, permissions, and choices</p>
+      <h1>Privacy notice</h1>
+      <p class="lead">OKC TV Publisher is a private tool for authorized church staff. This notice describes the TV publishing feature and these information pages.</p>
+      <p>Questions or requests about this feature can be sent to <a href="mailto:brotherdonte.okc@gmail.com">brotherdonte.okc@gmail.com</a>. This notice does not describe the separate member-submission or email-upload service.</p>
+      <h2>What the publisher handles</h2>
+      <dl class="details">
+        <dt>Approved image files</dt>
+        <dd>The tablet sends current approved landscape JPEGs through the owner’s Apps Script publisher to Google Photos. Any metadata already embedded in an approved JPEG travels with that file. Received submissions, unapproved Gallery images, and separate original or recovery files are not automatically included.</dd>
+        <dt>Photo and schedule metadata</dt>
+        <dd>The tablet stores approval information and a publishing manifest. The manifest includes filenames, photo identifiers, image hashes, dimensions, file sizes, and display-date ranges. The server stores the committed manifest, Google Photos media and album identifiers, earlier revision identifiers needed for replacement, and synchronization status.</dd>
+        <dt>Connection and authorization information</dt>
+        <dd>The tablet stores its publishing endpoint and connection settings. Its separate device connection key is encrypted using Android Keystore. The server stores the matching device key in its Apps Script project properties. Google authorization is handled by the owner’s Google account and Apps Script; the tablet does not receive the owner’s Google OAuth token.</dd>
+        <dt>Support messages</dt>
+        <dd>If you email the support address, the recipient receives your email address and the contents you choose to send. Do not send publishing keys, passwords, or Google authorization tokens.</dd>
+      </dl>
+      <h2>Why this information is used</h2>
+      <p>The publisher uses images and metadata to verify landscape orientation, identify changed revisions, prevent duplicate retry uploads, apply staff-selected display dates, and report whether publishing has completed. Filenames and hashes help match an approved Gallery item to its current revision; a hash is not a copy of the image.</p>
+      <p>Community Day uses October 1–December 20 inclusive each year, in America/New_York. The tablet supplies a 400-day schedule so the server can maintain seasonal album membership while the tablet is offline.</p>
+      <h2>Google access and the album</h2>
+      <p>The owner authorizes Google Photos access to upload media and read or edit app-created data. The app creates and manages <strong>OKC TV — Automatic Landscape</strong>. Its Google access is used for this publishing feature; the feature does not request access to Gmail or Google Contacts.</p>
+      <p>Google processes the uploaded files in the owner’s account. API uploads use original quality and count toward that account’s storage. The publisher does not create a public sharing link as part of its normal album setup. The account owner controls any subsequent sharing or access through Google Photos.</p>
+      <p>The app-created-data scope may not expose photos added manually or by other apps. An absence of an unmanaged-content warning therefore does not establish that every image in the album is managed by this publisher.</p>
+      <h2>What is kept, and what removal means</h2>
+      <p>The tablet retains its Gallery files, approvals, connection settings, and publishing state until they are changed or removed through the app or device’s data controls. The server retains the current manifest and photo identities needed for future synchronization. Obsolete per-photo records are removed after the related album withdrawal is confirmed; active and seasonal records remain available for later use. There is no fixed automatic retention period for all publisher data.</p>
+      <p>Replacing, hiding, or deleting a Gallery item can remove its earlier or ineligible revision from the managed album after successful synchronization. It does <strong>not</strong> delete uploaded images from the Google Photos library. The account owner must manage those library images separately in Google Photos.</p>
+      <p>JPEG bytes pass through Apps Script during upload; the publisher stores its processing metadata in script properties rather than saving JPEG files there. The publisher code does not intentionally log image payloads or credential values. Google’s platform processing and account services are also subject to <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>.</p>
+      <h2>Pause, revoke, or stop</h2>
+      <ul>
+        <li><strong>Pause tablet updates:</strong> stops new tablet publishing updates. Existing cloud images remain, and the server continues to apply its saved seasonal schedule every 15 minutes.</li>
+        <li><strong>Hide or remove a photo from publishing:</strong> synchronize the change while tablet updates are enabled, then confirm the album result. Pausing first prevents new changes from reaching the server.</li>
+        <li><strong>Revoke Google access:</strong> the owner can remove the app’s authorization through Google account controls. Further Google API operations require authorization again; revocation does not itself delete uploaded photos or local records.</li>
+        <li><strong>Stop scheduled cloud changes:</strong> the owner must also disable the Apps Script clock trigger or revoke its Google access. Changing the device key alone stops the old tablet connection, not the server’s saved schedule.</li>
+      </ul>
+      <p>For assistance with access or publisher records, contact <a href="mailto:brotherdonte.okc@gmail.com">brotherdonte.okc@gmail.com</a>. Google Photos library content remains under the account owner’s controls.</p>
+      <h2>These information pages</h2>
+      <p>These static pages include no analytics scripts, advertising, sign-in flow, or data-entry forms. GitHub Pages hosts these information pages. GitHub logs and stores visitors’ IP addresses for security purposes, including visits made without signing in to GitHub. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub Pages data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Following a service link or sending email uses that service under its own policies.</p>
+      <p><a href="index.html">Return to the homepage</a> or read the <a href="terms.html">service terms</a>.</p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>OKC TV Publisher · Authorized church staff use</p>
+      <p><a href="mailto:brotherdonte.okc@gmail.com">brotherdonte.okc@gmail.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
