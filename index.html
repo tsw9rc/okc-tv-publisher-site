@@ -3,65 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="OKC TV Publisher helps authorized church staff publish approved landscape photos to a dedicated Google Photos album.">
-  <title>OKC TV Publisher</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Share church photos with O&rsquo;Kelly Chapel. Crop and name your photos, choose portrait or landscape frames, and send them to church staff for review.">
+  <title>Share Church Memories | OKC Image Studios</title>
+  <link rel="stylesheet" href="studio.css">
+  <script src="studio.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="index.html">OKC TV Publisher</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand-bar">
+        <a href="index.html" aria-label="OKC Image Studios home"><img class="church-brand" src="assets/church-brand.webp" alt="O&rsquo;Kelly Chapel Missionary Baptist Church" width="300" height="150"></a>
+        <img class="studio-brand" src="assets/studio-brand.png" alt="OKC Image Studios &mdash; Design Anxiety ATL by Brother Donte" width="390" height="200">
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#studio-tools">Studio tools</a>
+        <a href="tv-publisher.html">TV &amp; tablet displays</a>
+        <a href="studio-privacy.html">Photo privacy</a>
       </nav>
-    </div>
-  </header>
-  <main id="main" class="shell">
-    <p class="eyebrow">Private church display tool</p>
-    <h1>OKC TV Publisher</h1>
-    <p class="lead">A way for authorized church staff to send approved landscape photos from the OKC tablet to a dedicated Google Photos album, with display dates managed throughout the year.</p>
-    <div class="cards">
-      <section class="card" aria-labelledby="approve-heading">
-        <span class="step">01 / Staff approval</span>
-        <h2 id="approve-heading">Choose the photos</h2>
-        <p>Staff review and approve Gallery photos before publishing. Received submissions and unapproved images are not automatically published.</p>
+    </header>
+    <main id="main">
+      <section class="studio-hero" aria-labelledby="hero-heading">
+        <div class="hero-copy">
+          <p class="eyebrow">O&rsquo;Kelly Chapel</p>
+          <h1 id="hero-heading">Share your<br><em>church photos.</em></h1>
+          <p class="church-motto">Equipping, Encouraging and Enhancing the lives of God&rsquo;s people through the Word of God.</p>
+          <p class="church-invitation">Your worship, ministry and fellowship memories belong in the story.</p>
+          <a class="button button-primary" href="https://script.google.com/macros/s/AKfycbyssqxUVHCUqK0O1XkhN_K3kER5trXIt2nqcTqf9sgAg4-SgfCbiGrs4DNAgqa4nCBD/exec">Start photo submission <span aria-hidden="true">&#8599;</span></a>
+          <p class="entry-note">Opens the church photo studio. Have today&rsquo;s code from the tablet ready, or use your church event QR link.</p>
+          <div class="trust" aria-label="Photo sharing safeguards"><span>Your originals stay yours</span><span>Staff review every photo</span></div>
+        </div>
+        <section class="hero-art" aria-labelledby="frame-examples-heading">
+          <div class="art-heading"><span class="eyebrow" id="frame-examples-heading">Made for your memories</span><span class="small-mark" aria-hidden="true">&#10022;</span></div>
+          <div class="hero-examples">
+            <figure class="hero-portrait">
+              <div class="frame-display portrait">
+                <img id="portrait-frame" src="assets/chapel-garden-portrait.webp" alt="Chapel Garden portrait frame" width="150" height="240">
+                <span class="photo-placeholder" id="portrait-placeholder" style="inset:3.75% 5.75% 13.125% 5.25%" aria-hidden="true"><span class="placeholder-sun"></span><span class="placeholder-hills"></span><span class="placeholder-label">Your church<br>memory</span></span>
+              </div>
+              <figcaption>Portrait <span>Room for every detail.</span></figcaption>
+            </figure>
+            <figure class="hero-landscape">
+              <div class="frame-display landscape">
+                <img id="landscape-frame" src="assets/chapel-garden-landscape.webp" alt="Chapel Garden landscape frame" width="240" height="150">
+                <span class="photo-placeholder" id="landscape-placeholder" style="inset:6.5% 3.984375% 20.375% 3.984375%" aria-hidden="true"><span class="placeholder-sun"></span><span class="placeholder-hills"></span><span class="placeholder-label">A moment<br>to remember</span></span>
+              </div>
+              <figcaption>Landscape <span>A little more together.</span></figcaption>
+            </figure>
+          </div>
+          <div class="example-controls"><button id="next-example" type="button">Show another frame <span aria-hidden="true">&#8635;</span></button><button id="pause-motion" type="button" aria-pressed="false">Pause motion</button></div>
+          <p id="frame-status" class="frame-status" role="status">Chapel Garden &middot; portrait &amp; landscape</p>
+          <p class="sample-credit">Actual OKC frame designs with illustrated placeholders. Choose your photo and frame in the studio.</p>
+        </section>
       </section>
-      <section class="card" aria-labelledby="publish-heading">
-        <span class="step">02 / Landscape album</span>
-        <h2 id="publish-heading">Keep the display wide</h2>
-        <p>The publisher checks image dimensions and rotation, then adds approved landscape JPEGs to <strong>OKC TV — Automatic Landscape</strong>, an album created by this app.</p>
+      <section class="how-it-works" id="how-it-works" aria-labelledby="journey-heading">
+        <div class="section-heading"><p class="eyebrow">A little care. A lasting memory.</p><h2 id="journey-heading">From your phone<br>to our church family.</h2></div>
+        <ol class="journey">
+          <li><span class="step-number">01</span><div><h3>Choose your photos</h3><p>Open the studio, enter the tablet&rsquo;s daily code, then choose photos or take one with your phone.</p></div></li>
+          <li><span class="step-number">02</span><div><h3>Make them yours</h3><p>Crop, zoom and name each photo. Add its ministry, occasion or season and choose a frame preference.</p></div></li>
+          <li><span class="step-number">03</span><div><h3>Review and send</h3><p>Check your choices and permission to share. Church staff receive the photos for assessment before display.</p></div></li>
+        </ol>
       </section>
-      <section class="card" aria-labelledby="schedule-heading">
-        <span class="step">03 / Seasonal dates</span>
-        <h2 id="schedule-heading">Follow the saved schedule</h2>
-        <p>The tablet prepares the display dates. The server checks the saved schedule every 15 minutes, including while the tablet is offline.</p>
+      <section class="studio-tools" id="studio-tools" aria-labelledby="tools-heading">
+        <div class="section-heading"><p class="eyebrow">Thoughtful tools, simple choices</p><h2 id="tools-heading">Give every photo<br>the right place.</h2><p>Everything stays together in the photo studio, from your first crop to your final review.</p></div>
+        <div class="tool-grid">
+          <article><span class="tool-symbol" aria-hidden="true">&#8983;</span><h3>Find the right crop</h3><p>Keep the original shape or choose portrait, landscape or square. Zoom and position the image, then reset or save the edited copy.</p></article>
+          <article><span class="tool-symbol" aria-hidden="true">&#9635;</span><h3>See your frame</h3><p>Browse authentic OKC designs, search the library and preview the fit. You can also let staff choose the frame.</p></article>
+          <article><span class="tool-symbol" aria-hidden="true">&#10022;</span><h3>Tell its story</h3><p>Add a photo name and choose a ministry, event, birthday month or season. New suggestions wait for staff review.</p></article>
+          <article><span class="tool-symbol" aria-hidden="true">&#10003;</span><h3>Send with confidence</h3><p>Review the full submission, confirm permission and keep your confirmation reference. Your phone&rsquo;s original files stay on your device.</p></article>
+        </div>
+        <a class="text-link" href="https://script.google.com/macros/s/AKfycbyssqxUVHCUqK0O1XkhN_K3kER5trXIt2nqcTqf9sgAg4-SgfCbiGrs4DNAgqa4nCBD/exec">Open the photo studio <span aria-hidden="true">&#8599;</span></a>
       </section>
-    </div>
-    <div class="prose">
-      <h2>Photos change. The album follows.</h2>
-      <p>When staff edit an approved photo, the replacement is confirmed in the managed album before its previous revision is removed from that album. Hidden, deleted, portrait, and out-of-season entries leave the album after the relevant update is successfully processed.</p>
-      <p>Removing an item from this album does <strong>not</strong> delete its uploaded image from the Google Photos library. Library images remain under the account owner’s Google Photos controls. Uploads use original quality and count toward the owner’s Google account storage.</p>
-      <h2>Community Day, every fall</h2>
-      <p>Community Day photos are scheduled for <strong>October 1 through December 20, inclusive, each year</strong>, using America/New_York dates. Other photos follow staff-selected display rules. The tablet refreshes a 400-day schedule; an expired schedule needs a new tablet sync.</p>
-      <aside class="note" aria-label="What pausing does">
-        <p><strong>Pause tablet updates</strong> stops new updates from the tablet. It does not clear the album or stop the server from applying its already saved seasonal schedule. Staff should check the publishing status before assuming a change has reached Google Photos.</p>
-      </aside>
-      <h2>One album, independent screens</h2>
-      <p>The tablet’s screensaver runs independently. A compatible TV photo viewer can display the managed Google Photos album; TV support and album selection must be checked on that device. Keep the dedicated album for publisher-managed photos rather than adding images manually.</p>
-      <p>This is a private staff tool, not a public upload or account-registration service. Setup requires the owner’s Google authorization and an authorized tablet connection.</p>
-      <p>Read how images, schedules, and connection details are handled in the <a href="privacy.html">privacy notice</a>, and review the <a href="terms.html">authorized-use and service terms</a>.</p>
-      <h2>Contact</h2>
-      <p>For setup, privacy, or display questions, contact <a href="mailto:brotherdonte.okc@gmail.com">brotherdonte.okc@gmail.com</a>. Do not include publishing keys or Google credentials in your message.</p>
-    </div>
-  </main>
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <p>OKC TV Publisher · Authorized church staff use</p>
-      <p><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
-    </div>
-  </footer>
+      <section class="display-section" aria-labelledby="display-heading">
+        <div><p class="eyebrow">Memories beyond the moment</p><h2 id="display-heading">A place on<br>our church screens.</h2><p>Staff prepare and approve the final photos for the tablet display. TV publishing uses approved landscape images and their saved display dates.</p><p>The tablet and a compatible TV viewer can play independently. TV connection and custom-album playback must be confirmed on the church TV.</p><a class="text-link" href="tv-publisher.html">About OKC TV Publisher <span aria-hidden="true">&#8594;</span></a></div>
+        <aside class="season-note" aria-labelledby="community-heading"><span class="season-mark" aria-hidden="true">&#10023;</span><p class="eyebrow">Community Day</p><h3 id="community-heading">Every fall.<br>Every year.</h3><p class="season-dates">October 1 &mdash; December 20</p><p>Community Day photos follow these yearly display dates. Staff keep the final say on framing and classification.</p></aside>
+      </section>
+      <section class="closing" aria-labelledby="closing-heading"><p class="eyebrow">One church. Many stories.</p><h2 id="closing-heading">What will you share?</h2><a class="button button-primary" href="https://script.google.com/macros/s/AKfycbyssqxUVHCUqK0O1XkhN_K3kER5trXIt2nqcTqf9sgAg4-SgfCbiGrs4DNAgqa4nCBD/exec">Start photo submission <span aria-hidden="true">&#8599;</span></a><p>Photos are reviewed before they appear on a church display.</p></section>
+    </main>
+    <footer class="site-footer"><div><strong>OKC Image Studios</strong><p>Design Anxiety ATL by Brother Donte.<br>Created for the O&rsquo;Kelly Chapel family.</p></div><nav aria-label="Footer navigation"><a href="studio-privacy.html">Member photo privacy</a><a href="studio-terms.html">Member photo terms</a><a href="tv-publisher.html">TV publishing</a><a href="privacy.html">Publisher privacy</a><a href="terms.html">Publisher terms</a><a href="mailto:brotherdonte.okc@gmail.com">Contact Brother Donte</a></nav></footer>
+  </div>
 </body>
 </html>
