@@ -92,3 +92,10 @@ body[data-motion="paused"] .hero-examples figure{animation-play-state:paused}
 @media(max-width:760px){.page-shell{width:calc(100% - 40px)}.site-header{min-height:102px;gap:14px}.brand{width:164px}.site-header nav{gap:12px;font-size:12px}.quiet-button{padding:8px 12px;border-radius:8px}.site-header nav>a{display:none}.studio-home{grid-template-columns:1fr;gap:38px;padding:36px 0 32px}.hero-copy{padding-inline:6px}h1{font-size:clamp(61px,13.8vw,82px);margin-bottom:18px;line-height:.96}.invitation{font-size:17px;line-height:1.65;max-width:340px;margin-bottom:23px}.desktop-break{display:none}.button-primary{min-height:60px;min-width:226px;font-size:18px;padding:14px 23px}.entry-note{margin-top:16px;font-size:11px;max-width:300px}.hero-art{width:min(100%,480px);margin:auto}.hero-examples{height:clamp(260px,70vw,365px)}.hero-portrait{left:5%;width:42%}.hero-landscape{right:1%;width:69%}.art-caption{font-size:27px;margin-top:20px;gap:18px}.sample-credit{font-size:10px;margin-top:5px}.site-footer{flex-direction:column;gap:6px;align-items:center;padding:20px 0;font-size:11px}.site-footer nav{gap:24px}.site-footer p{text-align:center}dialog{padding:44px 24px 26px}dialog h2{font-size:37px}}
 @media(max-width:360px){.page-shell{width:calc(100% - 32px)}.brand{width:146px}.quiet-button{font-size:11px;padding-inline:9px}h1{font-size:48px}.studio-home{padding-top:30px}.art-caption{font-size:23px;gap:12px}.site-footer nav{gap:18px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero-portrait{transform:rotate(-4deg)}.hero-landscape{transform:rotate(3deg)}}
+
+/* Randomized frame changes preserve the public illustration boundary. */
+.frame-display{opacity:1;transition:opacity .35s ease}
+.frame-display.is-changing{opacity:0}
+.church-motto{font-size:clamp(17px,1.35vw,20px);line-height:1.6;max-width:490px}
+@media(max-width:760px){.church-motto{font-size:16px}.art-caption{font-size:23px}}
+@media(prefers-reduced-motion:reduce){.frame-display{transition:none}}
